@@ -48,29 +48,33 @@ function parseTokens() {
 }
 
 // ---------- 组件清单 ----------
-function listComponents(dir, baseUrl) {
-  if (!existsSync(dir)) {
+/** 源码链接分支：v1.0.0 合入 main 后改回 'main' */
+const SOURCE_BRANCH = 'refactor/v1.0.0';
+
+function listComponents(relDir) {
+  const absDir = resolve(baseWeb, relDir);
+  if (!existsSync(absDir)) {
     return [];
   }
-  return readdirSync(dir)
+  return readdirSync(absDir)
     .filter((file) => file.endsWith('.tsx') && !file.endsWith('.test.tsx'))
     .sort()
     .map((file) => {
       const name = file.replace('.tsx', '');
-      const source = readFileSync(join(dir, file), 'utf8');
+      const source = readFileSync(join(absDir, file), 'utf8');
       const exportMatch = source.match(/export function ([A-Z]\w*)/);
       const docMatch = source.match(/\/\*\*\n \* ([^\n]*)/);
       return {
         name: exportMatch?.[1] ?? name,
         file,
         desc: docMatch?.[1]?.trim() ?? '',
-        url: `${baseUrl}/${dir.replace(resolve(workspaceRoot) + '/', '')}/${file}`,
+        url: githubUrl(`${relDir}/${file}`),
       };
     });
 }
 
 function githubUrl(relativePath) {
-  return `https://github.com/iwantools/iwan-admin/blob/main/${relativePath}`;
+  return `https://github.com/iwantools/iwan-admin/blob/${SOURCE_BRANCH}/${relativePath}`;
 }
 
 // ---------- 渲染 ----------
@@ -97,7 +101,7 @@ function render({ colors, radius, typeScale }, patterns, primitives) {
     .join('\n');
   const componentCard = (item) =>
     `<div class="comp"><div class="comp-head"><span class="comp-name">${item.name}</span>
-      <a class="comp-link" href="${githubUrl(item.url)}">源码 ↗</a></div>
+      <a class="comp-link" href="${item.url}">源码 ↗</a></div>
       <p class="comp-desc">${item.desc || '—'}</p></div>`;
   const patternsHtml = patterns.map(componentCard).join('\n');
   const primitivesHtml = primitives.map(componentCard).join('\n');
@@ -172,10 +176,8 @@ function render({ colors, radius, typeScale }, patterns, primitives) {
 const tokens = parseTokens();
 const sharedDir = join(baseWeb, 'src/shared/components');
 const uiDir = join(baseWeb, 'src/components/ui');
-const patterns = [
-  ...listComponents(sharedDir, githubUrl('web/src/shared/components')),
-];
-const primitives = listComponents(uiDir, githubUrl('web/src/components/ui'));
+const patterns = listComponents('src/shared/components');
+const primitives = listComponents('src/components/ui');
 const html = render(tokens, patterns, primitives);
 
 if (check) {
