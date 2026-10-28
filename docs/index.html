@@ -39,7 +39,7 @@
 </header>
 <main>
   <section>
-    <h2>色彩 Token（29）</h2>
+    <h2>色彩 Token（27）</h2>
     <div class="grid"><div class="swatch"><span class="chip" style="background:#f6f7f9"></span>
         <span class="tname">background</span><span class="tvalue">#f6f7f9</span></div>
 <div class="swatch"><span class="chip" style="background:#161a20"></span>
@@ -48,8 +48,6 @@
         <span class="tname">card</span><span class="tvalue">#ffffff</span></div>
 <div class="swatch"><span class="chip" style="background:#ffffff"></span>
         <span class="tname">control</span><span class="tvalue">#ffffff</span></div>
-<div class="swatch"><span class="chip" style="background:#ffffff"></span>
-        <span class="tname">topbar</span><span class="tvalue">#ffffff</span></div>
 <div class="swatch"><span class="chip" style="background:#fbfcfe"></span>
         <span class="tname">secondary</span><span class="tvalue">#fbfcfe</span></div>
 <div class="swatch"><span class="chip" style="background:#eff1f4"></span>
@@ -66,8 +64,6 @@
         <span class="tname">primary</span><span class="tvalue">#155eef</span></div>
 <div class="swatch"><span class="chip" style="background:#ffffff"></span>
         <span class="tname">primary-foreground</span><span class="tvalue">#ffffff</span></div>
-<div class="swatch"><span class="chip" style="background:#1249c4"></span>
-        <span class="tname">primary-hover</span><span class="tvalue">#1249c4</span></div>
 <div class="swatch"><span class="chip" style="background:#eff4ff"></span>
         <span class="tname">accent-soft</span><span class="tvalue">#eff4ff</span></div>
 <div class="swatch"><span class="chip" style="background:#067647"></span>
@@ -136,39 +132,51 @@
         <span class="tname">text-4xl</span></div>
   </section>
   <section>
-    <h2>Patterns 组件（8）</h2>
+    <h2>Patterns 组件（9）</h2>
     <div class="comp"><div class="comp-head"><span class="comp-name">ConfirmDialog</span>
-      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/shared/components/ConfirmDialog.tsx">源码 ↗</a></div>
-      <p class="comp-desc">危险/需确认操作按钮（触发器式）：点击先弹出确认 Dialog，确认后才执行 onConfirm。</p></div>
+      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/patterns/ConfirmDialog.tsx">源码 ↗</a></div>
+      <p class="comp-desc">危险/需确认操作按钮（触发器式）：点击先弹出确认 AlertDialog，确认后才执行 onConfirm。</p></div>
 <div class="comp"><div class="comp-head"><span class="comp-name">DataTable</span>
-      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/shared/components/DataTable.tsx">源码 ↗</a></div>
+      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/patterns/DataTable.tsx">源码 ↗</a></div>
       <p class="comp-desc">列定义驱动的数据表格（S-02 用户列表 / S-29 表格基座）：</p></div>
 <div class="comp"><div class="comp-head"><span class="comp-name">EmptyState</span>
-      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/shared/components/EmptyState.tsx">源码 ↗</a></div>
+      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/patterns/EmptyState.tsx">源码 ↗</a></div>
       <p class="comp-desc">—</p></div>
 <div class="comp"><div class="comp-head"><span class="comp-name">QueryErrorAlert</span>
-      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/shared/components/Feedback.tsx">源码 ↗</a></div>
+      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/patterns/Feedback.tsx">源码 ↗</a></div>
       <p class="comp-desc">—</p></div>
 <div class="comp"><div class="comp-head"><span class="comp-name">FilterSelect</span>
-      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/shared/components/FilterBar.tsx">源码 ↗</a></div>
+      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/patterns/FilterBar.tsx">源码 ↗</a></div>
       <p class="comp-desc">—</p></div>
+<div class="comp"><div class="comp-head"><span class="comp-name">FormField</span>
+      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/patterns/FormField.tsx">源码 ↗</a></div>
+      <p class="comp-desc">表单字段 pattern（非 RHF 表单用；RHF 表单继续用 ui/form 的 FormField/FormItem）：</p></div>
 <div class="comp"><div class="comp-head"><span class="comp-name">PageHeader</span>
-      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/shared/components/PageHeader.tsx">源码 ↗</a></div>
-      <p class="comp-desc">—</p></div>
+      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/patterns/PageHeader.tsx">源码 ↗</a></div>
+      <p class="comp-desc">页头 pattern（设计体系两种落地形态）：</p></div>
 <div class="comp"><div class="comp-head"><span class="comp-name">Pagination</span>
-      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/shared/components/Pagination.tsx">源码 ↗</a></div>
+      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/patterns/Pagination.tsx">源码 ↗</a></div>
       <p class="comp-desc">—</p></div>
 <div class="comp"><div class="comp-head"><span class="comp-name">StatusBadge</span>
-      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/shared/components/StatusBadge.tsx">源码 ↗</a></div>
+      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/patterns/StatusBadge.tsx">源码 ↗</a></div>
       <p class="comp-desc">—</p></div>
   </section>
   <section>
-    <h2>基础组件（15）</h2>
-    <div class="comp"><div class="comp-head"><span class="comp-name">alert</span>
+    <h2>基础组件（25）</h2>
+    <div class="comp"><div class="comp-head"><span class="comp-name">alert-dialog</span>
+      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/ui/alert-dialog.tsx">源码 ↗</a></div>
+      <p class="comp-desc">—</p></div>
+<div class="comp"><div class="comp-head"><span class="comp-name">alert</span>
       <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/ui/alert.tsx">源码 ↗</a></div>
+      <p class="comp-desc">—</p></div>
+<div class="comp"><div class="comp-head"><span class="comp-name">avatar</span>
+      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/ui/avatar.tsx">源码 ↗</a></div>
       <p class="comp-desc">—</p></div>
 <div class="comp"><div class="comp-head"><span class="comp-name">badge</span>
       <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/ui/badge.tsx">源码 ↗</a></div>
+      <p class="comp-desc">—</p></div>
+<div class="comp"><div class="comp-head"><span class="comp-name">breadcrumb</span>
+      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/ui/breadcrumb.tsx">源码 ↗</a></div>
       <p class="comp-desc">—</p></div>
 <div class="comp"><div class="comp-head"><span class="comp-name">button</span>
       <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/ui/button.tsx">源码 ↗</a></div>
@@ -178,7 +186,13 @@
       <p class="comp-desc">—</p></div>
 <div class="comp"><div class="comp-head"><span class="comp-name">checkbox</span>
       <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/ui/checkbox.tsx">源码 ↗</a></div>
-      <p class="comp-desc">复选框（设计稿 S-02 复选框规格）：16px、圆角 4、无阴影；</p></div>
+      <p class="comp-desc">—</p></div>
+<div class="comp"><div class="comp-head"><span class="comp-name">collapsible</span>
+      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/ui/collapsible.tsx">源码 ↗</a></div>
+      <p class="comp-desc">—</p></div>
+<div class="comp"><div class="comp-head"><span class="comp-name">command</span>
+      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/ui/command.tsx">源码 ↗</a></div>
+      <p class="comp-desc">—</p></div>
 <div class="comp"><div class="comp-head"><span class="comp-name">dialog</span>
       <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/ui/dialog.tsx">源码 ↗</a></div>
       <p class="comp-desc">—</p></div>
@@ -187,6 +201,9 @@
       <p class="comp-desc">—</p></div>
 <div class="comp"><div class="comp-head"><span class="comp-name">form</span>
       <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/ui/form.tsx">源码 ↗</a></div>
+      <p class="comp-desc">form 不在 shadcn Base registry（无 base 变体），是登记在案的 RHF 手工适配层：</p></div>
+<div class="comp"><div class="comp-head"><span class="comp-name">input-group</span>
+      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/ui/input-group.tsx">源码 ↗</a></div>
       <p class="comp-desc">—</p></div>
 <div class="comp"><div class="comp-head"><span class="comp-name">input</span>
       <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/ui/input.tsx">源码 ↗</a></div>
@@ -194,11 +211,20 @@
 <div class="comp"><div class="comp-head"><span class="comp-name">label</span>
       <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/ui/label.tsx">源码 ↗</a></div>
       <p class="comp-desc">—</p></div>
+<div class="comp"><div class="comp-head"><span class="comp-name">pagination</span>
+      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/ui/pagination.tsx">源码 ↗</a></div>
+      <p class="comp-desc">—</p></div>
 <div class="comp"><div class="comp-head"><span class="comp-name">select</span>
       <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/ui/select.tsx">源码 ↗</a></div>
       <p class="comp-desc">—</p></div>
 <div class="comp"><div class="comp-head"><span class="comp-name">separator</span>
       <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/ui/separator.tsx">源码 ↗</a></div>
+      <p class="comp-desc">—</p></div>
+<div class="comp"><div class="comp-head"><span class="comp-name">sheet</span>
+      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/ui/sheet.tsx">源码 ↗</a></div>
+      <p class="comp-desc">—</p></div>
+<div class="comp"><div class="comp-head"><span class="comp-name">sidebar</span>
+      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/ui/sidebar.tsx">源码 ↗</a></div>
       <p class="comp-desc">—</p></div>
 <div class="comp"><div class="comp-head"><span class="comp-name">skeleton</span>
       <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/ui/skeleton.tsx">源码 ↗</a></div>
@@ -208,6 +234,9 @@
       <p class="comp-desc">—</p></div>
 <div class="comp"><div class="comp-head"><span class="comp-name">textarea</span>
       <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/ui/textarea.tsx">源码 ↗</a></div>
+      <p class="comp-desc">—</p></div>
+<div class="comp"><div class="comp-head"><span class="comp-name">tooltip</span>
+      <a class="comp-link" href="https://github.com/iwantools/iwan-admin/blob/refactor/v1.0.0/src/components/ui/tooltip.tsx">源码 ↗</a></div>
       <p class="comp-desc">—</p></div>
   </section>
 </main>

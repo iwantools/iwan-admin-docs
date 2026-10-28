@@ -5,7 +5,7 @@
  * 数据源（相对工作区根）：
  *   projects/iwan-admin/web/src/styles/globals.css      → 设计 token（色彩/圆角/字号）
  *   projects/iwan-admin/web/src/shared/menu-icons.ts    → 菜单图标注册表
- *   projects/iwan-admin/web/src/shared/components/*.tsx → patterns 组件清单
+ *   projects/iwan-admin/web/src/components/patterns/*.tsx → patterns 组件清单（ADR-0010/0011：shared/components 已收口为 patterns）
  *   projects/iwan-admin/web/src/components/ui/*.tsx     → 基础组件清单
  *
  * 用法：
@@ -174,9 +174,9 @@ function render({ colors, radius, typeScale }, patterns, primitives) {
 
 // ---------- 主流程 ----------
 const tokens = parseTokens();
-const sharedDir = join(baseWeb, 'src/shared/components');
+const sharedDir = join(baseWeb, 'src/components/patterns');
 const uiDir = join(baseWeb, 'src/components/ui');
-const patterns = listComponents('src/shared/components');
+const patterns = listComponents('src/components/patterns');
 const primitives = listComponents('src/components/ui');
 const html = render(tokens, patterns, primitives);
 
